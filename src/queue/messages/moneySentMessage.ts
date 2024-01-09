@@ -20,6 +20,8 @@ export class MoneySentMessage implements Imessage {
 
                 const parsedMessage: MoneySentMessageType = JSON.parse(message.content.toString());
 
+                console.log('money sent message received', parsedMessage);
+
                 // TODO: If parsedMessage is not of type MoneySentMessageType, make sure to increase the retry count and log the error
 
                 sendSentNotification(parsedMessage).catch((error) => {

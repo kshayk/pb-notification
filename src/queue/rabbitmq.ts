@@ -1,5 +1,4 @@
 import * as amqp from 'amqplib';
-import process from "process";
 
 export async function queueConnect(queueName: string): Promise<amqp.Channel> {
     const connection = await amqp.connect(`amqp://${process.env.QUEUE_USERNAME}:${process.env.QUEUE_PASSWORD}@rabbitmq:5672`);

@@ -1,5 +1,8 @@
 import {MoneyReceivedMessage} from "./queue/messages/MoneyReeceivedMessage";
 import {MoneySentMessage} from "./queue/messages/moneySentMessage";
+import * as dotenv from 'dotenv';
+
+dotenv.config();
 
 const moneyReceivedQueue = new MoneyReceivedMessage();
 const moneySentQueue = new MoneySentMessage();
